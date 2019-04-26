@@ -1,0 +1,67 @@
+{
+  "label": "Apidaze",
+  "name": "apidaze",
+  "apiVersion": "v1",
+  "internal": false,
+  "configurationType": "GLOBAL",
+  "deployment": {
+    "profiles": [
+      {
+        "name": "default",
+        "label": "Default",
+        "memory": 256,
+        "description": "Default configuration"
+      }
+    ],
+    "allowMultipleInstances": false
+  },
+  "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/apidaze.png",
+  "configurationHelpUrl": "/endpoints_apidaze.html#configuration",
+  "status": "ACTIVE",
+  "stores": [],
+  "events": [
+    {
+      "label": "Script requested",
+      "name": "scriptRequested",
+      "description": "Happens when any Apidaze asks for the external script."
+    }
+  ],
+  "functions": [
+    {
+      "label": "GET",
+      "name": "_get"
+    },
+    {
+      "label": "POST",
+      "name": "_post"
+    },
+    {
+      "label": "PUT",
+      "name": "_put"
+    },
+    {
+      "label": "DELETE",
+      "name": "_delete"
+    },
+    {
+      "label": "Send script",
+      "name": "_sendScript"
+    }
+  ],
+  "scripts": [
+    "functions.js"
+  ],
+  "configuration": [
+    {
+      "name": "appId",
+      "label": "App ID",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "apiKey",
+      "label": "API key",
+      "type": "text"
+    }
+  ]
+}
